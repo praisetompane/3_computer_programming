@@ -1,0 +1,27 @@
+'''
+    Context:
+
+    Definitions:
+
+    Objective:
+
+    Assumptions:
+
+    Constraints:
+
+    Algorithm flow:
+    
+    Example(s):
+        input = 
+        state:
+
+'''
+
+---Insert implementation here
+
+'''
+    Performance
+
+        Time = 
+        Space = 
+'''

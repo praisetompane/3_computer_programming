@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "__string": "cpp",
+        "cstdio": "cpp",
+        "locale": "cpp",
+        "strstream": "cpp"
+    }
+}
