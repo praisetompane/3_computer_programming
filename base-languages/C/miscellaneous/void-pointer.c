@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/*
+    Use cases:
+        1. Allocate memory for any data type without knowing type(e.g. malloc or calloc)
+*/
 int main() {
     int n = 1;
     void *ptr;
