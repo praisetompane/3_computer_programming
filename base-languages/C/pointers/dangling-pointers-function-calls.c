@@ -16,7 +16,10 @@ int main() {
         by fnc does not belong to the program anymore.
     */
     ptr = func(); 
-    //Only coincidentally works as OS has not reassinged it to another program
+    /*
+        Only coincidentally works as OS has not reassinged it to another program.
+        May cause segmentation fault
+    */
     printf("Value in ptr's memory:%d\n", *ptr); 
     return 0;
 }
