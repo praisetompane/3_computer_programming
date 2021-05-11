@@ -1,3 +1,8 @@
+/*
+    Assign n blocks of memory of size_t size
+    Memory blocks are initialised to 0
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -23,6 +28,6 @@ int main() {
         sum += *(numbers + i);
     }
     
-    printf("Sum of the numbers is: %d\n", sum);
+    printf("Total sum of the numbers is: %d\n", sum);
     return 0;
 }

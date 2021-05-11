@@ -1,3 +1,8 @@
+/*
+    Assign contigous memory of size_t size
+    Memory blocks are initialised to garbage values
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
