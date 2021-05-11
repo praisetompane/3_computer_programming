@@ -2,15 +2,27 @@
 #include <stdlib.h>
 
 int main() {
-    int *ptr = (int *)malloc(sizeof(int) * 1);
+    int numberOfNumbers, sum = 0;
+
+    printf("Please enter number of numbers: ");
+    scanf("%d", &numberOfNumbers);
+
+    int *numbers = (int *)malloc(sizeof(int) * numberOfNumbers);
     
-    if(ptr == NULL) {
+    if(numbers == NULL) {
         printf("Memory allocation unsuccefull");
         exit(1);
     }
 
-    *ptr = 5;
+    for(int i = 0; i < numberOfNumbers; i++) {
+        printf("Please provide a number: ");
+        scanf("%d", numbers + i);
+    }
 
-    printf("Number stored: %d\n", *ptr);
+    for(int i = 0; i < numberOfNumbers; i++) {
+        sum += *(numbers + i);
+    }
+    
+    printf("Sum of the numbers is: %d\n", sum);
     return 0;
 }
