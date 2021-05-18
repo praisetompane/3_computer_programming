@@ -7,14 +7,14 @@ struct charset {
 };
 
 
-void KeyValue(char *character, int *code) {
+void keyValue(char *character, int *code) {
     scanf("%c %d", character, code);
 }
 
 int main() {
     struct charset charsetvalue;
     printf("Please provide me a character and it's code: ");
-    KeyValue(&charsetvalue.character, &charsetvalue.code);
+    keyValue(&charsetvalue.character, &charsetvalue.code);
 
     printf("Character: %c Code: %d\n", charsetvalue.character, charsetvalue.code);
 
