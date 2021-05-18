@@ -32,5 +32,7 @@ int main() {
     scale(2, some_point);
     printf("New state\n");
     print(some_point);
+    free(some_point);
+    some_point = NULL;
     return 0;
 }
