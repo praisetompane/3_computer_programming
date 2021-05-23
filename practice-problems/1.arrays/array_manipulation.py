@@ -27,29 +27,27 @@ list of operations
               ]
 '''
 
-'''
- for op in operationss
-    for x in range(op[0], op[1])
-        array[x] += op[2]
 
- find max value in array
-
- time complexity
-    Q = number of operations = queries : <= 200000
-    QL = range length per op = a + b : <= 200000 * n ****
-    N = number of elements in array = n
-
-----------------------------------
-    N for initialisation
-
-    O(N * (Q * QL)) where QL <= N
-    Therefore => O(N * N) = O(n^2)
-    N for finding max
------------------------------------     
-QL = Can I reduce this??
-'''
 def arrayManipulation(n, operations):
     '''
+         find max value in array
+
+        time complexity
+            Q = number of operations = queries : <= 200000
+            QL = range length per op = a + b : <= 200000 * n ****
+            N = number of elements in array = n
+
+        ----------------------------------------------------------
+            N for initialisation
+
+            O(N * (Q * QL)) where QL <= N
+            Therefore => O(N * N) = O(n^2)
+
+            N for finding max
+            
+            Therefore: Quadratic = TOO slow!
+        ----------------------------------------------------------
+
         array = [0 for _ in range(n)]
         for query in queries:
             for x in range(query[0], query[1] + 1):
