@@ -26,7 +26,7 @@ Short Circuiting
 
 	Short circuiting is not applied to bitwise operators (& and |)
 
-Misusing the equality operator if(a = 100)
+Misusing the equality operatorif(a = 100)
 	Error raised:
 		incompatible types
 		required: boolean
@@ -39,7 +39,7 @@ Misusing the equality operator if(a = 100)
 
 General Decision Structuring
 
-		The structure of the decision statements 	  Testing your assumptions 	  Planning for failure
+		The structure of the decision statements	  Testing your assumptions	  Planning for failure
 
 -Always expect the unexpected. Techniques to assist in this process include:
  	   -Always keep a else clause
@@ -48,5 +48,5 @@ General Decision Structuring
       -Always use block statements
 
 Floating Point Considerations
-	pg 106  
- 
+	pg 106
+
