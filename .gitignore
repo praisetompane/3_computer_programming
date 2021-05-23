@@ -2,3 +2,6 @@
 *.DS_Store
 *.gradle
 */target
+*.out
+*.o
+*.a
