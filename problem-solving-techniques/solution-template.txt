@@ -1,5 +1,6 @@
 '''
     Context:
+        Given:
 
     Definitions:
 
@@ -9,11 +10,11 @@
 
     Constraints:
 
-    Algorithm flow:
-    
     Example(s):
         input = 
         state:
+
+    Algorithm flow:
 
 '''
 
