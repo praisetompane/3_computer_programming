@@ -14,7 +14,7 @@
         input = 
         state:
 
-    Algorithm flow:
+    Flow:
 
 '''
 

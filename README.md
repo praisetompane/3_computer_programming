@@ -6,6 +6,12 @@
 
 * Functional programming => is a paradigm in which the programmer stipulate only the objective to ge computer and it’s left to figure out the best way to achieve the objective
 
+#### programmer skills
+* algorithms 
+* datastructures
+* programming
+* communication
+
 #### Rough View of the applicatios of programming
 * Client Facing:
     Web - Mobile first philosophy
@@ -30,7 +36,7 @@
     * SQL
 * Systems Programming
     * C Programming
-
+    * https://www.youtube.com/playlist?list=PLoiJCSBgIJbIgHC4pwOa4-p2Fo84LuZdF
 
 #### sources
 * https://mitpress.mit.edu/books/concepts-techniques-and-models-computer-programming
