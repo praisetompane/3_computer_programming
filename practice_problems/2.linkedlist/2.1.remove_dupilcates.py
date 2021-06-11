@@ -35,13 +35,12 @@ def remove_duplicates(linkedlist):
     element_frequency = {}
     current_node = linkedlist.head
     while(current_node.next is not None):
+        element_frequency[current_node.data] = 1
         if(current_node.next.data in element_frequency):
-            current_node.next = current_node.next.next
-            element_frequency[current_node.data] = 1
+            current_node.next = current_node.next.next  
         else: 
-            element_frequency[current_node.data] = 1
             current_node = current_node.next
-    
+        
 def printlist(linkedlist):
     current_node = linkedlist.head
     while(current_node.next is not None):
