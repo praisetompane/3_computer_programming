@@ -22,15 +22,9 @@
             else
                 add element and count = 1
 '''
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
-    
+from impl.linkedlist import LinkedList
+
 def remove_duplicates(linkedlist):
     element_frequency = {}
     current_node = linkedlist.head
@@ -41,32 +35,16 @@ def remove_duplicates(linkedlist):
         else: 
             current_node = current_node.next
         
-def printlist(linkedlist):
-    current_node = linkedlist.head
-    while(current_node.next is not None):
-        print(current_node.data)
-        current_node = current_node.next
-    print(current_node.data)
 
-def initialise_linkedlist(numbers, linkedlist):
-    previous_node = None
-    for n in numbers:
-        node = Node(n)
-        if linkedlist.head is None: 
-            linkedlist.head = node
-            previous_node = node
-        else: 
-            previous_node.next = node
-            previous_node = node 
 def main():
     linkedlist = LinkedList()
     numbers = [1, 2, 4, 6, 1, 6, 8, 5]
-    initialise_linkedlist(numbers, linkedlist)
+    linkedlist.initialise_from_array(numbers)
     print("before delete")
-    printlist(linkedlist)
+    linkedlist.printlist()
     remove_duplicates(linkedlist)
     print("after delete")
-    printlist(linkedlist)
+    linkedlist.printlist()
 
 main()
 
