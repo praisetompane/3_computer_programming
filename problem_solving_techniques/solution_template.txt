@@ -2,9 +2,9 @@
     Context:
         Given:
 
-    Definitions:
-
     Objective:
+
+    Definitions:
 
     Assumptions:
 
@@ -16,13 +16,13 @@
 
     Flow:
 
-'''
-
----Insert implementation here
-
-'''
-    Performance
+    Performance:
 
         Time = 
         Space = 
+    
+    Alternatives:
 '''
+
+
+---Insert implementation here
