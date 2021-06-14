@@ -12,9 +12,10 @@ Definitions:
 Assumptions:
     linkedlist has > 2 nodes
     middle node to delete exists in linkedlist
+    middle node is not the head nor the tail node
 Constraints:
     only have access to the middle node
-    access = only node I have the ability to delete
+    access = only node I am given
 Example:
     linkedlist = a->b->c->d->e->f
     result => linkedlist = a->b->d->e->f
@@ -24,20 +25,17 @@ Flow:
     prior_node.next = prior_node.next.next
 
 Performance:
-    Time = O(N - 1) = O(N) #drop constants
-        inspect every element until you find node before the target_node
+    Time = O(1) 
+        constant time to copy data and shift pointers
     Space = O(N)
         Space to store linkedlist
 
 '''
 from impl.linkedlist import LinkedList, Node
 
-def delete_middle_node(target_node, linkedlist):
-    current_node = linkedlist.head
-    while(current_node.next is not None):
-        if(current_node.next.data == target_node.data):
-            current_node.next = current_node.next.next
-        current_node = current_node.next
+def delete_middle_node(target_node):
+    target_node.data = target_node.next.data
+    target_node.next = target_node.next.next
 
 def main():
     linkedlist = LinkedList()
@@ -45,7 +43,14 @@ def main():
     linkedlist.initialise_from_array(numbers)
     print("before delete")
     linkedlist.printlist()
-    delete_middle_node(Node(6), linkedlist)
+    target_node = None
+    target_node_value = 6
+    current_node = linkedlist.head
+    while(current_node.next is not None):
+        if(current_node.data == target_node_value):
+            target_node = current_node
+        current_node = current_node.next
+    delete_middle_node(target_node)
     print("after delete")
     linkedlist.printlist()
 
