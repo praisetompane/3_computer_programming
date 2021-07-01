@@ -35,6 +35,7 @@
 * Systems Programming
     * https://www.youtube.com/playlist?list=PLoiJCSBgIJbIgHC4pwOa4-p2Fo84LuZdF
     * C Programming: https://www.youtube.com/watch?v=4OGMB4Fhh50&list=PLBlnK6fEyqRhX6r2uhhlubuF5QextdCSM
+    * Assembly
 
 #### Sources
 * https://mitpress.mit.edu/books/concepts-techniques-and-models-computer-programming
