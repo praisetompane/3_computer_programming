@@ -1,5 +1,6 @@
 from impl.stack import Stack
 '''
+    general use case = reverse order
     Performance:
         N = length of item list
         Time = O(2 * N) = O(N)

@@ -1,5 +1,12 @@
 from impl.stack import Stack
 
+'''
+    general use case: symmetry test
+    Performance:
+        N = length of document
+        Time = O(N)
+        Space = O(N)
+'''
 
 class BracketsLinter():
     document = None
