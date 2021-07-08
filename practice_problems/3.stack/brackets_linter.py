@@ -3,63 +3,29 @@ from impl.stack import Stack
 '''
     general use case: symmetry test
     Performance:
-        N = length of document
+        N = length of _document
         Time = O(N)
         Space = O(N)
 '''
 
 class BracketsLinter():
-    document = None
-    opening_parathesis = None
-    opening_curly = '{'
-    opening_round = '('
-    opening_square = '['
+    _document = None
+    _opening_parathesis = None
+    _opening_curly = '{'
+    _opening_round = '('
+    _opening_square = '['
     def __init__(self):
-        self.opening_parathesis = Stack()
+        self._opening_parathesis = Stack()
 
-    def lint(self, document):
-        for char in document:
-            if(char == self.opening_round or char == self.opening_curly or char == self.opening_square):
-                self.opening_parathesis.push(char)
-            if(char == '}' and self.opening_parathesis.peek() == self.opening_curly):
-                self.opening_parathesis.pop()
-            if(char == ']' and self.opening_parathesis.peek() == self.opening_square):
-                self.opening_parathesis.pop()
-            if(char == ')' and self.opening_parathesis.peek() == self.opening_round):
-                self.opening_parathesis.pop()
+    def lint(self, _document):
+        for char in _document:
+            if(char == self._opening_round or char == self._opening_curly or char == self._opening_square):
+                self._opening_parathesis.push(char)
+            if(char == '}' and self._opening_parathesis.peek() == self._opening_curly):
+                self._opening_parathesis.pop()
+            if(char == ']' and self._opening_parathesis.peek() == self._opening_square):
+                self._opening_parathesis.pop()
+            if(char == ')' and self._opening_parathesis.peek() == self._opening_round):
+                self._opening_parathesis.pop()
 
-        return self.opening_parathesis.is_empty() 
-
-
-def main():
-    c_linter = BracketsLinter()
-    valid_code = '''
-                    public void add(int index, int element){
-                        if(numberOfElements < _size)
-                            array[index] = element;
-                        else {
-                            resize();
-                            array[index] = element;
-                        }
-                        numberOfElements++;
-                    }
-                '''
-    print("valid code")
-    print(c_linter.lint(valid_code))
-
-    invalid_code = '''
-                public void add[int index, int element){
-                    if(numberOfElements < _size)
-                        array[index] = element;
-                    else {
-                        resize();
-                        array(index] = element;
-                    }
-                    numberOfElements++;
-                }
-            '''
-    print("invalid code")
-    print(c_linter.lint(invalid_code))
-
-
-main()
+        return self._opening_parathesis.is_empty() 
