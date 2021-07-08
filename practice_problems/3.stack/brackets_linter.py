@@ -1,18 +1,28 @@
 from impl.stack import Stack
 
+
 class BracketsLinter():
     document = None
     opening_parathesis = None
+    opening_curly = '{'
+    opening_round = '('
+    opening_square = '['
     def __init__(self):
         self.opening_parathesis = Stack()
 
     def lint(self, document):
-        document_length = len(document)
-        for char in range(document_length):
-            if(char == '(' or char == '{' or char == '['): self.opening_parathesis.push(char)
-            elif(char == ')' or char == '}' or char == ']'): self.opening_parathesis.pop()
+        for char in document:
+            if(char == self.opening_round or char == self.opening_curly or char == self.opening_square):
+                self.opening_parathesis.push(char)
+            if(char == '}' and self.opening_parathesis.peek() == self.opening_curly):
+                self.opening_parathesis.pop()
+            if(char == ']' and self.opening_parathesis.peek() == self.opening_square):
+                self.opening_parathesis.pop()
+            if(char == ')' and self.opening_parathesis.peek() == self.opening_round):
+                self.opening_parathesis.pop()
 
-        return self.opening_parathesis.is_empty()
+        return self.opening_parathesis.is_empty() 
+
 
 def main():
     c_linter = BracketsLinter()
@@ -28,7 +38,7 @@ def main():
                     }
                 '''
     print("valid code")
-    assert(c_linter.lint(valid_code))
+    print(c_linter.lint(valid_code))
 
     invalid_code = '''
                 public void add[int index, int element){
@@ -42,5 +52,7 @@ def main():
                 }
             '''
     print("invalid code")
-    assert(c_linter.lint(invalid_code))
+    print(c_linter.lint(invalid_code))
+
+
 main()
