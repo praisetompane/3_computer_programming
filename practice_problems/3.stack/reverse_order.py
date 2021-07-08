@@ -3,17 +3,25 @@ from impl.stack import Stack
     Performance:
         N = length of item list
         Time = O(2 * N) = O(N)
-        Space = O(2 * N) = O(N) 
+        Space = O(2 * N) = O(N)
 '''
+
+
 def reverse_order(item_list):
     reverse_order = Stack()
-    reserved = ''
+    reversed = None
     for item in item_list:
         reverse_order.push(item)
-    while(reverse_order.is_empty() is False):
-        reserved += (reverse_order.pop())
+    if(type(item_list) == str):
+        reversed = ''
+        while(reverse_order.is_empty() is False):
+            reversed += reverse_order.pop()
+    else:
+        reversed = []
+        while(reverse_order.is_empty() is False):
+            reversed.append(reverse_order.pop())
 
-    return reserved
+    return reversed
 
 
 def main():
@@ -23,6 +31,10 @@ def main():
     print("%s reversed: %s" % (s1, reverse_order(s1)))
     s1 = "racecar"
     print("%s reversed: %s" % (s1, reverse_order(s1)))
+    s1 = [1, 2, 3, 4, 5]
+    print(s1, "reversed:", reverse_order(s1))
+    s1 = []
+    print(s1, "reversed:", reverse_order(s1))
 
 
 main()
