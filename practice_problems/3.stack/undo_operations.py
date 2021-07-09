@@ -16,30 +16,32 @@ from impl.stack import Stack
 '''
 
 
-class TextEditor:
+class OperationsUndoer:
     undo_stack = None
     redo_stack = None
-    document = None
+    current_state = None
 
-    def __init__(self, document):
+    def __init__(self, current_state):
         self.undo_stack = Stack()
         self.redo_stack = Stack()
-        self.document = document
+        self.current_state = current_state
 
-    def write(self, text):
-        self.undo_stack.push(text)
-        self.document += text
+    def add_operations_result(self, operation_result):
+        self.undo_stack.push(operation_result
+)
+        self.current_state += operation_result
+
         self.display()
 
     def undo(self):
         self.redo_stack.push(self.undo_stack.peek())
         last_word = self.undo_stack.pop()
-        self.document = self.document[:-len(last_word)]
+        self.current_state = self.current_state[:-len(last_word)]
         self.display()
 
     def redo(self):
-        self.document += self.redo_stack.pop()
+        self.current_state += self.redo_stack.pop()
         self.display()
 
     def display(self):
-        print(self.document)
+        print(self.current_state)

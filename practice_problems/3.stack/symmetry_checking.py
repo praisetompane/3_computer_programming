@@ -8,7 +8,7 @@ from impl.stack import Stack
         Space = O(N)
 '''
 
-class BracketsLinter():
+class SymmetryChecker():
     _document = None
     _opening_parathesis = None
     _opening_curly = '{'
