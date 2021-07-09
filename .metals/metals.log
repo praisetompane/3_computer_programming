@@ -142,3 +142,8 @@ val subtractRomans = Map(900 -> "CM",
 	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
 
 [0m2021.07.09 00:49:40 INFO  time: code lens generation in 4.34s[0m
+Jul 09, 2021 10:33:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 09, 2021 11:05:47 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.07.09 23:08:22 INFO  shutting down Metals[0m
