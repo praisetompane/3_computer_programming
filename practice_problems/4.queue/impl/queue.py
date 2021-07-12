@@ -7,43 +7,44 @@ class Node:
 
 
 class Queue:
-    top = None
-
-    # O(N)
+    first = None
+    last = None
+    # O(1)
     def add(self, item):
         node = Node(item)
-        if(self.top is None):
-            self.top = node
+        if(self.first is None):
+            self.first = node
+            self.last = self.first
         else:
-            current = self.top
-            while(current.next is not None):
-                current = current.next
-            current.next = node
+            self.last.next = node
+            self.last = node
     # O(1)
 
     def remove(self):
-        if(self.top is None):
+        if(self.first is None):
             raise Exception("Queue is empty")
         else:
-            item = self.top.data
-            self.top = self.top.next
+            item = self.first.data
+            self.first = self.first.next
+            if(self.first is None):
+                self.last = None
             return item
     # O(1)
 
     def peek(self):
-        if(self.top is None):
+        if(self.first is None):
             raise Exception("Queue is empty")
         else:
-            return self.top.data
+            return self.first.data
     # O(1)
 
     def is_empty(self):
-        return self.top is None
+        return self.first is None
 
     def __str__(self):
-        current = self.top
+        current = self.first
         queue = ''
-        if(self.top is None):
+        if(self.first is None):
             return 'queue is empty'
         else:
             while(current.next is not None):
