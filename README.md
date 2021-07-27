@@ -38,7 +38,16 @@
     * Assembly
 
 #### Sources
-* https://mitpress.mit.edu/books/concepts-techniques-and-models-computer-programming
-* https://github.com/collections/programming-languages 
-* Structure and Interpretation of Computer Programs => 
-    https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/index.htm
+##### Neso Academy
+    https://www.youtube.com/watch?v=4OGMB4Fhh50&list=PLBlnK6fEyqRhX6r2uhhlubuF5QextdCSM
+
+    https://www.youtube.com/watch?v=s0g4ty29Xgg&list=PLBlnK6fEyqRh6isJ01MBnbNpV3ZsktSyS
+
+    https://www.youtube.com/watch?v=VHbSopMyc4M&list=PLBlnK6fEyqRjKA_NuK9mHmlk0dZzuP1P5
+
+##### https://mitpress.mit.edu/books/concepts-techniques-and-models-computer-programming
+
+##### https://github.com/collections/programming-languages 
+
+##### Structure and Interpretation of Computer Programs => 
+* https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/index.htm
