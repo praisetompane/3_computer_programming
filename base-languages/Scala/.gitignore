@@ -1,4 +1,5 @@
+.ammonite
 .bloop
 .metals
 .vscode
-.ammonite
+.target

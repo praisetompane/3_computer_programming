@@ -2,6 +2,7 @@
 
 # Tool chain
 * Scala
+* Sca
 * sbt
 * Metals
 * Bloop
