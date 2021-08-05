@@ -33,6 +33,9 @@ class BinaryTreeNode:
         print(self.data)
 
 
+# In processing:
+# the left child is processed before the right
+# the ordering types process the parent in different places(i.e. as seen from left to right, first or last) 
 class BinaryTree:
     root = None
 
@@ -40,6 +43,7 @@ class BinaryTree:
         n = BinaryTreeNode(root, None, None)
         self.root = n
 
+    # order seen from left to right
     def _in_order_traversal(self, node, process):
         if(node is not None):
             self._in_order_traversal(node.left, process)
@@ -49,6 +53,7 @@ class BinaryTree:
     def in_order_print(self):
         self._in_order_traversal(self.root, print)
 
+    # before(pre) children => parent, left, right
     def _pre_order_traversal(self, node, process):
         if(node is not None):
             process(node.data)
@@ -58,6 +63,7 @@ class BinaryTree:
     def pre_order_print(self):
         self._pre_order_traversal(self.root, print)
 
+    # after(post) children = left, right, parent
     def _post_order_traversal(self, node, process):
         if(node is not None):
             self._post_order_traversal(node.left, process)
