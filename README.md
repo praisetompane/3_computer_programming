@@ -37,17 +37,13 @@
     * C Programming: https://www.youtube.com/watch?v=4OGMB4Fhh50&list=PLBlnK6fEyqRhX6r2uhhlubuF5QextdCSM
     * Assembly
 
-#### Sources
-##### Neso Academy
-    https://www.youtube.com/watch?v=4OGMB4Fhh50&list=PLBlnK6fEyqRhX6r2uhhlubuF5QextdCSM
+#### sources
+* Peter Van Roy, Seif Haridi, Complete Concepts, Techniques, and Models of Computer Programming
+* Brian Kernighan, Dennis Ritchie, The C Programming Language
+* https://www.youtube.com/watch?v=4OGMB4Fhh50&list=PLBlnK6fEyqRhX6r2uhhlubuF5QextdCSM
+* Structure and Interpretation of Computer Programs => 
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/index.htm
 
-    https://www.youtube.com/watch?v=s0g4ty29Xgg&list=PLBlnK6fEyqRh6isJ01MBnbNpV3ZsktSyS
+#### Radar
+* https://github.com/collections/programming-languages 
 
-    https://www.youtube.com/watch?v=VHbSopMyc4M&list=PLBlnK6fEyqRjKA_NuK9mHmlk0dZzuP1P5
-
-##### https://mitpress.mit.edu/books/concepts-techniques-and-models-computer-programming
-
-##### https://github.com/collections/programming-languages 
-
-##### Structure and Interpretation of Computer Programs => 
-* https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/index.htm
