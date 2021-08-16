@@ -1,10 +1,11 @@
 # 3_Programming
 # Definitions
-* objective => unpack what computer programming is and its role in the implementation of computation
-* Imperative programming => is a paradigm in which the programmer stipulates to the computer the steps it should take to achieve an objective 
-* Functional programming => is a paradigm in which the programmer stipulate only the objective to ge computer and it’s left to figure out the best way to achieve the objective
+* objective => unpack what computer programming is and its role in the implementation of computation.
+* Imperative programming => is a paradigm in which the programmer stipulates to the computer the steps it should take to achieve an objective.
+* Functional programming => is a paradigm in which the programmer stipulate only the objective and lets the computer igure out the best way to achieve it.
 
 # Programmer skills
+* mathematics for computer science
 * algorithms 
 * datastructures
 * programming
