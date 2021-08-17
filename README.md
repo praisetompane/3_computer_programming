@@ -40,11 +40,21 @@
 
 # sources
 
+* MIT 6.0001 Introduction to Computer Science Programming in Python
+    https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
+
+* MIT 6.009 Fundamentals of Programming
+    http://catalog.mit.edu/search/?P=6.009
+
+* MIT 6.031 Elements of Software Construction (6.031 Elements of Software Construction)
+    https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-elements-of-software-construction-fall-2008/
+
+* MIT 6.816 Multicore Programming
+    https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-189-multicore-programming-primer-january-iap-2007/
+
+* MIT 6.905 Large-scale Symbolic Systems
+    http://catalog.mit.edu/search/?P=6.905
 * Peter Van Roy, Seif Haridi, Complete Concepts, Techniques, and Models of Computer Programming
-
-* Brian Kernighan, Dennis Ritchie, The C Programming Language
-
-* https://www.youtube.com/watch?v=4OGMB4Fhh50&list=PLBlnK6fEyqRhX6r2uhhlubuF5QextdCSM
 
 * Structure and Interpretation of Computer Programs => 
     https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/index.htm
