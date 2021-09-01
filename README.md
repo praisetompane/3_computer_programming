@@ -40,7 +40,7 @@
 
 # sources
 
-* MIT 6.0001 Introduction to Computer Science Programming in Python
+* MIT 6.0001 Introduction to Computer Science Programming in Python ***
     https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
 
 * MIT 6.009 Fundamentals of Programming
@@ -54,6 +54,7 @@
 
 * MIT 6.905 Large-scale Symbolic Systems
     http://catalog.mit.edu/search/?P=6.905
+    
 * Peter Van Roy, Seif Haridi, Complete Concepts, Techniques, and Models of Computer Programming
 
 * Structure and Interpretation of Computer Programs => 
@@ -62,3 +63,7 @@
 # Radar
 * https://github.com/collections/programming-languages 
 
+# Legend
+* In progress
+** Completed
+*** Completed equivalent

@@ -30,7 +30,7 @@
                     handle digit place overflows:
                         carry over extra place value
                         set remainder to output's place value
-                mode to each number's next node
+                move to each number's next node
 
             Performance:    
                 FirstNumberLength = FNL
@@ -50,12 +50,21 @@
                     second_number_current_node = 2
 
 '''
-from impl.linkedlist import Linkedlist
-def add(first_number, second_number):
-    first_number_current_node = first_number.head
-    second_number_current_node = second_number.head
+from impl.linkedlist import LinkedList, Node
 
-    while(first_number_current_node is not None or second_number_current_node is not None):
-        return 1
+def add(first_number, second_number):
+    return
+
+def main():
+    first = LinkedList()
+    first.initialise_from_array([7,1,6])
+    first.printlist()
+    second = LinkedList()
+    second.initialise_from_array([5,9,2])
+    second.printlist()
+    result = add(first, second)
+    result.printlist()
+
+main()
 
 
