@@ -1,15 +1,24 @@
-React
-JavaScript
-NodeJs
-
-
-Python
-Django
-
-C  
-Go 
-
-Scala
-
-SQL
-
+declarative
+    data processing
+        SQL ***
+    functional
+        Scala **
+        Haskell
+        React *
+imperative 
+    object_orientated
+        Python *
+            Django *
+        JavaScript **
+            NodeJS *
+        TypeScript
+    procedural
+        assmebly *
+        C *
+        Go *
+        
+# Mastery
+* beginner
+** intermediate
+*** experienced
+**** exper
