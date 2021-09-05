@@ -1,5 +1,4 @@
-# Playground to experiment with JavaScript
-
+# Playground to experiment with haskell
 # sources
 * library reference:
 * language reference: 

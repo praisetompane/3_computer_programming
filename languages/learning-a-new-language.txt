@@ -1,4 +1,4 @@
-Learning A New Language
+learning a new language
 	1	the syntax and semantics
 	2	the style of effective programs, with emphasis on idioms
 	3	specific implementations (particularly, performance characteristics)

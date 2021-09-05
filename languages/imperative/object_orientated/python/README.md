@@ -1,5 +1,9 @@
-# Playground to experiment with Python
-Coe Python syntax and applications using the language
-# Tool chain
-* Python 3
-* HTML
+# playground to experiment with python
+core python syntax and applications using the language
+# sources
+* library reference: https://docs.python.org/3.9/library/index.html   
+* language reference: https://docs.python.org/3.9/reference/index.html#reference-index
+* extending and embedding: https://docs.python.org/3.9/extending/index.html
+* all docs : https://docs.python.org/3.9/
+
+

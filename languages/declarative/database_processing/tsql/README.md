@@ -1,4 +1,6 @@
 # Playground to experiment with TSQL
 
-# Tool chain
-* TSQL
+# sources
+* library reference:
+* language reference: 
+* extending and embedding:
