@@ -1,0 +1,14 @@
+1. Read/Listen 
+2. Create example
+3. Brute force flow
+4. Test
+5. Optimise
+    BUD system
+        Bottlenecks
+        Uncessary Work
+        Duplicated Work
+6. Test
+7. Implement
+    7.1 Optimise [language/tools specfic advantages]
+8. Walk through
+
