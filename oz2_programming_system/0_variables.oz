@@ -5,6 +5,8 @@
 %%%                                 systems memory := store
 
 %%% {} := procedure or function call
+%%% Browse := one argument procedure
+                %%% opens browser(i.e. window) and displays argumnet in it
 declare
 V=9999*9999
 {Browse V}

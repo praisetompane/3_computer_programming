@@ -49,16 +49,52 @@
                     first_number_current_node = 6
                     second_number_current_node = 2
 
+                    number_system_base = 10
+                    next_digit_place_carry = 0 #1
+                    for d1, d2 in first_number, second_number
+                        if d1 and d2 defined: 
+                            add them + next_digit_place_carry*next_digit_place
+                            if sum >= number_system_base
+                                set digit to sum/number_system_base
+                                set carry to sum%number_system_base
+                            else
+                                set digit to sum
+                        if d1 defined but no d2
+                            set digit to d1 + carry
+                        if d2 defined but no d1
+                            set digit to d2 + carry
+                    
+                    21
+
 '''
 from impl.linkedlist import LinkedList, Node
 
 def add(first_number, second_number):
-    return
+    number_system_base = 10
+    carry = 0 
+    result = LinkedList()
+
+    d1 = first_number.head
+    d2 = second_number.head
+
+    while(d1.next is not None or d2.next is not None):
+        if d1 is not None and d2 is not None: 
+            sum = d1.data + d2.data + carry
+            result.add(sum/number_system_base)
+            carry = sum%number_system_base
+        elif d1 is not None and d2 is None:
+            result.add(d1.data + carry) # > than base ??
+        else:
+            result.add(d2.data + carry) # > than base ??
+        d1 = d1.next
+        d2 = d2.next
+    return result
 
 def main():
     first = LinkedList()
     first.initialise_from_array([7,1,6])
     first.printlist()
+    print("")
     second = LinkedList()
     second.initialise_from_array([5,9,2])
     second.printlist()
