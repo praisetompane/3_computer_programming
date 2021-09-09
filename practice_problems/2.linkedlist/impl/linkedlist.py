@@ -15,7 +15,6 @@ class LinkedList:
         print(current_node.data)
 
     def add(self, data):
-        print('addding %d to number digits' % (data))
         new_number = Node(data)
         if self.head is None: self.head = new_number
         else:
