@@ -1,7 +1,7 @@
 import unittest
 
 from impl.linkedlist import LinkedList
-from sum_linkedlist import add
+from 2_5_sum_linkedlist import add
 
 class SumLinkedListTests(unittest.TestCase):
     def test_add_equal_length(self):
