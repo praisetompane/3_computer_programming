@@ -67,7 +67,7 @@
                     21
 
 '''
-from impl.linkedlist import LinkedList, Node
+from impl.linkedlist import LinkedList
 
 def add(first_number, second_number):
     number_system_base = 10
@@ -83,25 +83,22 @@ def add(first_number, second_number):
             next_digit = sum%number_system_base
             result.add(next_digit) 
             carry = sum//number_system_base
-        elif d1 is not None and d2 is None: result.add(d1.data + carry) 
-        else: result.add(d2.data + carry)
-        d1 = d1.next
-        d2 = d2.next
+            d1 = d1.next
+            d2 = d2.next
+        elif d1 is not None and d2 is None: 
+            d1 = d1.next
+            result.add(d1.data + carry) 
+        else: 
+            result.add(d2.data + carry)
+            d2 = d2.next
+
     return result
 
-def main():
-    first = LinkedList()
-    first.initialise_from_array([7,1,6])
-    print('operand 1')
-    first.printlist()
-    second = LinkedList()
-    second.initialise_from_array([5,9,2])
-    print('operand 2')
-    second.printlist()
-    result = add(first, second)
-    print('result')
-    result.printlist()
 
-main()
+class A:
+    a = None
+    def __init__(self, n):
+        self.a = n
 
-
+if __name__ == "__main__":
+    add()

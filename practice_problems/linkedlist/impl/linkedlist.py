@@ -8,6 +8,8 @@ class LinkedList:
         self.head = None
 
     def printlist(self):
+        if(self.head is None): return
+        print('')
         current_node = self.head
         while(current_node.next is not None):
             print(current_node.data)
