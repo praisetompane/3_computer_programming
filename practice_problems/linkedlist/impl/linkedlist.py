@@ -4,17 +4,19 @@ class Node:
         self.next = None
 
 class LinkedList:
-    def __init__(self):
+    def __init__(self, numbers = []):
         self.head = None
+        self.initialise_from_array(numbers)
 
     def printlist(self):
-        if(self.head is None): return
         print('')
+        if(self.head is None): return
+        number = ''
         current_node = self.head
-        while(current_node.next is not None):
-            print(current_node.data)
+        while(current_node is not None):
+            number += str(current_node.data)
             current_node = current_node.next
-        print(current_node.data)
+        print(number)
 
     def add(self, data):
         new_number = Node(data)

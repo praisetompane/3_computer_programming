@@ -69,36 +69,50 @@
 '''
 from impl.linkedlist import LinkedList
 
+
 def add(first_number, second_number):
     number_system_base = 10
-    carry = 0 
+    carry = 0
     result = LinkedList()
 
     d1 = first_number.head
     d2 = second_number.head
 
+    def a(d1=0, d2=0, carry=0):
+        sum = d1 + d2 + carry
+        next_digit = sum % number_system_base
+        result.add(next_digit)
+        return sum//number_system_base
+
     while(d1 is not None or d2 is not None):
-        if d1 is not None and d2 is not None: 
-            sum = d1.data + d2.data + carry
-            next_digit = sum%number_system_base
-            result.add(next_digit) 
-            carry = sum//number_system_base
+        if d1 is not None and d2 is not None:
+            carry = a(d1.data, d2.data, carry)
             d1 = d1.next
             d2 = d2.next
-        elif d1 is not None and d2 is None: 
+        elif d1 is not None and d2 is None:
+            carry = a(d1.data, 0, carry)
             d1 = d1.next
-            result.add(d1.data + carry) 
-        else: 
-            result.add(d2.data + carry)
+        elif d2 is not None and d1 is None:
+            carry = a(d2.data, 0, carry)
             d2 = d2.next
 
+    if carry > 0:
+        result.add(carry)
     return result
 
 
 class A:
     a = None
+
     def __init__(self, n):
         self.a = n
 
+
 if __name__ == "__main__":
-    add()
+    print("supply numbers with the place value schema: ones tens hundreds thounsands ..")
+    first_number = input("first number: ")
+    second_number = input("second number: ")
+
+    result = add(LinkedList([int(n) for n in first_number]), 
+        LinkedList([int(n) for n in second_number]))
+    result.printlist()
