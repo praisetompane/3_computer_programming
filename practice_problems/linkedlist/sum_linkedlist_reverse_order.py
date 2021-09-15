@@ -3,7 +3,7 @@
         Given:
             Two numbers
                 each represented as linkedlist
-            The digits in reserver order
+            The digits in reserve order
                 such that
                     the 1's digit is at the head
     
