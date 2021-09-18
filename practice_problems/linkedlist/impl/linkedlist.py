@@ -33,7 +33,20 @@ class LinkedList:
     '''
         O(N)
     '''
+    '''
+        This actully builds a Stack
+            Given 592
+            Creates 295
+                2 will be head of LinkedList
+                The last value added, will be the first one processed
+                LIFO => Last In First Out
 
+        Insight: Transformation of any ordered data
+                   into a Singly linked list, produces
+                        a Stack representation of that data.
+                 Because you can only add to the top and remove from the top.
+                    Precisrly what a Stack is (Last In(at the top), First Out(from the top))
+    '''
     def add(self, data):
         new_number = Node(data)
         if self.head is None:
