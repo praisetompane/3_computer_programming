@@ -6,6 +6,10 @@ def: module: a collection of code
             has: 
                 name
 
+            on import:
+                whole module code ran, top to bottom and left to right
+                cached in sys.modules
+
 def: package: special kind of module for organising other modules
                 has: 
                     __path__ attribute 
