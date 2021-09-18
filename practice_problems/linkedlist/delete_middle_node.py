@@ -44,9 +44,9 @@ def main():
     numbers = [1, 2, 4, 6, 1, 6, 8, 5]
     linkedlist.initialise_from_array(numbers)
     print("before delete")
-    linkedlist.printlist()
+    linkedlist.toString()
     delete_middle_node(Node(6), linkedlist)
     print("after delete")
-    linkedlist.printlist()
+    linkedlist.toString()
 
 main()

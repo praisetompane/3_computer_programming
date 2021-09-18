@@ -1,4 +1,5 @@
 echo "installing python"
+brew update
 brew install python
 echo "done"
 

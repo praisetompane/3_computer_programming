@@ -6,7 +6,7 @@ def: module: a collection of code
             has: 
                 name
 
-def: package: special kind of module for orgnising other modules
+def: package: special kind of module for organising other modules
                 has: 
                     __path__ attribute 
 

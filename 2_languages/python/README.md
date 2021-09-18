@@ -6,5 +6,3 @@ core python syntax and applications using the language
 * extending and embedding: https://docs.python.org/3.9/extending/index.html
 * packages: https://pypi.org
 * all docs : https://docs.python.org/3.9/
-
-

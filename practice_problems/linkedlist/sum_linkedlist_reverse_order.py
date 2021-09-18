@@ -67,7 +67,7 @@
                     21
 
 '''
-from impl.linkedlist import LinkedList
+from linkedlist.impl.linkedlist import LinkedList
 
 
 def add(first_number, second_number):
@@ -101,13 +101,6 @@ def add(first_number, second_number):
     return result
 
 
-class A:
-    a = None
-
-    def __init__(self, n):
-        self.a = n
-
-
 if __name__ == "__main__":
     print("supply numbers with the place value schema: ones tens hundreds thounsands ..")
     first_number = input("first number: ")
@@ -115,4 +108,4 @@ if __name__ == "__main__":
 
     result = add(LinkedList([int(n) for n in first_number]), 
         LinkedList([int(n) for n in second_number]))
-    result.printlist()
+    result.toString()

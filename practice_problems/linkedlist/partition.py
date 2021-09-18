@@ -97,11 +97,11 @@ def main():
     numbers = [3 , 5 , 8 , 5 , 10 , 2 , 1]
     linkedlist.initialise_from_array(numbers)
     print("before parition")
-    linkedlist.printlist()
+    linkedlist.toString()
     print("partitioning the list by %d" % k)
     partition_list(k, linkedlist)
     print("partitioned list")
-    linkedlist.printlist() #3 -> 2 -> 1 -> 5 -> 8 -> 5 -> 10
+    linkedlist.toString() #3 -> 2 -> 1 -> 5 -> 8 -> 5 -> 10
 
     print("list of one")
     l2 = LinkedList()
@@ -109,10 +109,10 @@ def main():
     numbers = [3]
     l2.initialise_from_array(numbers)
     print("before parition")
-    l2.printlist()
+    l2.toString()
     print("partitioning the list by %d" % k)
     partition_list(k, l2)
     print("partitioned list")
-    l2.printlist() #3
+    l2.toString() #3
 
 main()

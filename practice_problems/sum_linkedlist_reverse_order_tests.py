@@ -1,7 +1,7 @@
 import unittest
 
-from impl.linkedlist import LinkedList
-from sum_linkedlist import add
+from linkedlist.impl.linkedlist import LinkedList
+from linkedlist.sum_linkedlist_reverse_order import add
 
 class SumLinkedListTests(unittest.TestCase):
     def test_add_equal_length(self):
@@ -13,8 +13,7 @@ class SumLinkedListTests(unittest.TestCase):
 
         print('test_add_equal_length')
         result = add(first, second)
-        result.printlist() #219
-        self.assertEqual(True, True)
+        self.assertEqual(219, result.toInt())
     def test_add_equal_length_with_carry(self):
         first = LinkedList()
         first.initialise_from_array([7,1,6])
@@ -24,8 +23,7 @@ class SumLinkedListTests(unittest.TestCase):
 
         print('test_add_equal_length_with_carry')
         result = add(first, second)
-        result.printlist() #2101
-        self.assertEqual(True, True)
+        self.assertEqual(2101, result.toInt())
 
     def test_add_different_length(self):
         first = LinkedList()
@@ -36,8 +34,7 @@ class SumLinkedListTests(unittest.TestCase):
 
         print('test_add_different_length')
         result = add(first, second)
-        result.printlist() #213
-        self.assertEqual(True, True)
+        self.assertEqual(213, result.toInt())
 
     def test_add_single_with_carry(self):
         first = LinkedList()
@@ -48,9 +45,7 @@ class SumLinkedListTests(unittest.TestCase):
 
         print('test_add_single_with_carry')
         result = add(first, second)
-        result.printlist() #21
-        self.assertEqual(True, True)
-        return
+        self.assertEqual(21, result.toInt())
 
     def test_add_single_with_no_carry(self):
         first = LinkedList()
@@ -61,8 +56,7 @@ class SumLinkedListTests(unittest.TestCase):
 
         print('test_add_single_with_no_carry')
         result = add(first, second)
-        result.printlist() #8
-        self.assertEqual(True, True)
+        self.assertEqual(8, result.toInt())
         return
 
     def test_add_empty(self):
@@ -74,8 +68,7 @@ class SumLinkedListTests(unittest.TestCase):
 
         print('test_add_empty')
         result = add(first, second)
-        result.printlist() #nothing
-        self.assertEqual(True, True)
+        self.assertEqual(0, result.toInt())
         return
 
 if __name__ == '__main__':

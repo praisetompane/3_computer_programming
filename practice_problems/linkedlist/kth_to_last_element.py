@@ -87,7 +87,7 @@ def main():
     k = 5
     numbers = [1, 2, 4, 6, 1, 6, 8, 5]
     linkedlist.initialise_from_array(numbers)
-    linkedlist.printlist()
+    linkedlist.toString()
     element = kth_element(k, linkedlist)
     print_result(k, element)
     k = 0

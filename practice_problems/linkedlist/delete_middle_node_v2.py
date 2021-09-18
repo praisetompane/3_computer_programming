@@ -42,7 +42,7 @@ def main():
     numbers = [1, 2, 4, 6, 1, 6, 8, 5]
     linkedlist.initialise_from_array(numbers)
     print("before delete")
-    linkedlist.printlist()
+    linkedlist.toString()
     target_node = None
     target_node_value = 6
     current_node = linkedlist.head
@@ -52,6 +52,6 @@ def main():
         current_node = current_node.next
     delete_middle_node(target_node)
     print("after delete")
-    linkedlist.printlist()
+    linkedlist.toString()
 
 main()
