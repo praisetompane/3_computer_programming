@@ -33,6 +33,29 @@ class LinkedList:
     '''
         O(N)
     '''
+
+    def add_to_end(self, data):
+        new_number = Node(data)
+        if self.head is None:
+            self.head = new_number
+        else:
+            current_node = self.head
+            while(current_node.next is not None):
+                current_node = current_node.next
+            current_node.next = new_number
+
+    '''
+        O(N)
+    '''
+
+    def initialise_from_array(self, numbers):
+        for n in numbers:
+            self.add(n)
+
+    '''
+        O(1)
+    '''
+
     '''
         This actully builds a Stack
             Given 592
@@ -47,21 +70,8 @@ class LinkedList:
                  Because you can only add to the top and remove from the top.
                     Precisrly what a Stack is (Last In(at the top), First Out(from the top))
     '''
+
     def add(self, data):
-        new_number = Node(data)
-        if self.head is None:
-            self.head = new_number
-        else:
-            current_node = self.head
-            while(current_node.next is not None):
-                current_node = current_node.next
-            current_node.next = new_number
-
-    '''
-        O(1)
-    '''
-
-    def add_to_top(self, data):
         new_number = Node(data)
         if self.head is None:
             self.head = new_number
@@ -69,17 +79,3 @@ class LinkedList:
             new_number.next = self.head
             self.head = new_number
 
-    '''
-        O(N)
-    '''
-
-    def initialise_from_array(self, numbers):
-        previous_node = None
-        for n in numbers:
-            node = Node(n)
-            if self.head is None:
-                self.head = node
-                previous_node = node
-            else:
-                previous_node.next = node
-                previous_node = node

@@ -19,48 +19,66 @@
 
 '''
 from linkedlist.impl.linkedlist import LinkedList
+from stack.impl.stack_list import Stack
 
-def add(first_number, second_number):
-    number_system_base = 10
-    result = LinkedList()
-    carry = 0
+class SumLinkedListForwardOrder:
 
-    first_num_digit = first_number.head
-    second_num_digit = second_number.head
-    
-    # O(1)
-    def _add(first, second, carry):
-        sum = first + second + carry
-        carry = sum//number_system_base
-        current_digit_value = sum % number_system_base
-        result.add_to_top(current_digit_value)
-        return carry
+    def initialise_from_array_into_stack(self, numbers):
+        num = Stack()
+        for n in numbers:
+            num.push(n)
+        return num
 
-    # O(N)
-    while(first_num_digit is not None or second_num_digit is not None):
-        if first_num_digit is not None and second_num_digit is not None:
-            carry = _add(first_num_digit.data, second_num_digit.data, carry)
-            first_num_digit = first_num_digit.next
-            second_num_digit = second_num_digit.next
-        elif first_num_digit is not None and second_num_digit is None:
-            carry = _add(first_num_digit.data, 0, carry)
-            first_num_digit = first_num_digit.next
-        elif first_num_digit is None and second_num_digit is not None:
-            carry = _add(0, second_num_digit.data, carry)
-            second_num_digit = second_num_digit.next
+    def add(self, first_number, second_number):
+        number_system_base = 10
+        result = LinkedList()
+        carry = 0
+        _first_number = self.initialise_from_array_into_stack(first_number)
+        _second_number = self.initialise_from_array_into_stack(second_number)
 
-    if carry > 0:
-        result.add_to_top(carry)
+        if _first_number.is_empty() is False or _second_number.is_empty() is False:
+            return 0
+        first_num_digit = _first_number.pop()
+        second_num_digit = _second_number.pop()
 
-    return result
+        # O(1)
+        def _add(first, second, carry):
+            sum = first + second + carry
+            carry = sum//number_system_base
+            current_digit_value = sum % number_system_base
+            result.add(current_digit_value)
+            return carry
+
+        # O(N)
+        while(_first_number.is_empty() is False or _second_number.is_empty() is False):
+            if _first_number.is_empty() is False and _second_number.is_empty() is False:
+                carry = _add(first_num_digit,second_num_digit, carry)
+                first_num_digit = _first_number.pop()
+                second_num_digit = _second_number.pop()
+
+            elif _first_number.is_empty() is False and _second_number.is_empty() is True:
+                carry = _add(first_num_digit, 0, carry)
+                first_num_digit = _first_number.pop()
+                second_num_digit = 0
+            elif _first_number.is_empty()  is True and _second_number.is_empty()  is False:
+                carry = _add(0, second_num_digit, carry)
+                second_num_digit = _second_number.pop()
+                first_num_digit = 0
+
+        carry = _add(first_num_digit,second_num_digit, carry)
+        if carry > 0:
+            result.add(carry)
+
+        return result
 
 
 if __name__ == "__main__":
-    first = input("first number: ")
-    first_number = LinkedList([int(n) for n in first])
-    second = input("second number: ")
-    second_number = LinkedList([int(n) for n in second])
+    first_number = input("first number: ")
+    second_number = input("second number: ")
+    adder = SumLinkedListForwardOrder()
+    print("adding %s and %s", (first_number, second_number))
 
-    print("adding %s and %s", (first, second))
+    first_numberList = [int(n) for n in first_number]
+    second_numberList = [int(n) for n in second_number]
 
-    add(first_number, second_number).toString()
+    adder.add(first_numberList, second_numberList).toString()
