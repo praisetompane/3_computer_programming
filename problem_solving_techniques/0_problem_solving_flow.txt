@@ -2,6 +2,10 @@
 2. Create example
 3. Brute force flow
 4. Test
+    base cases
+    general cases
+    error cases
+    etc
 5. Optimise
     BUD system
         Bottlenecks
