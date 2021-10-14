@@ -21,6 +21,8 @@ unpack what computer programming is and its role in the implementation of comput
 * structure and interpretation of computer programs => 
     https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/index.htm
 
+* The errors of tex†, Donald Knuth
+
 # radar
 * https://github.com/collections/programming-languages 
 

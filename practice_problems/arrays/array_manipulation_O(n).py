@@ -33,35 +33,54 @@ import sys
               ]
 '''
 
+
 def arrayManipulation(n, queries):
-    sums = [0] * n
+    sums = [0] * (n + 1)
     for query in queries:
         k = query[2]
-        sums[query[0]] += k     #set start index from where all indices are incremented by k
-        sums[query[1]] += -k    #set start index from where all indices are decremented by k
-    max_consective_inrease = 0
+        # set start index from where all indices are incremented by k
+        zero_based_start = query[0] - 1
+        sums[zero_based_start] += k
+        # set start index from where all indices are decremented by k
+        sums[query[1]] += -k
+        #print(f'a = {query[0]} b = {query[1]} and sums = {sums}')
+
+    max_consective_increase = 0
+    #print(f'susm final {sums}')
     for i in range(len(sums)):
-        if max_consective_inrease < max_consective_inrease + sums[i]:
-            max_consective_inrease = max_consective_inrease + sums[i]
-                    
-    return max_consective_inrease
+        if max_consective_increase < max_consective_increase + sums[i]:
+            max_consective_increase = max_consective_increase + sums[i]
+
+    sums_file =  open('data_10000000_100000_sums.txt', 'w')
+    for n in sums:
+        sums_file.write(str(n))
+    return max_consective_increase
+
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    nm = input().split()
+    print('first problem')
+    n = 5
+    m = 3
+    queries = [[1, 2, 100], [2, 5, 100], [3, 4, 100]]
+    result = arrayManipulation(n, queries)
+    print(result)
+    assert(result == 200)
 
-    n = int(nm[0])
+    print('second problem')
+    n = 10
+    m = 4
+    queries = [[2, 6, 8], [3, 5, 7], [1, 8, 1], [5, 9, 15]]
+    result = arrayManipulation(n, queries)
+    print(result)
+    assert(result == 31)
 
-    m = int(nm[1])
-
-    queries = []
-
-    for _ in range(m):
-        queries.append(list(map(int, input().rstrip().split())))
+    print('third problem')
+    n = 10000000 
+    m = 100000
+    with open('data_10000000_100000.txt', 'r') as file:
+        queries = [[int(x) for x in next(file).split()] for line in file]
 
     result = arrayManipulation(n, queries)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+    print(result)
+    assert(result == 2490686975)
