@@ -55,31 +55,24 @@ import sys
 '''
 
 def hourglassSum(arr):
-    current_center = [1,1]
-    max_row_and_col = len(arr[0]) - 1
-    def sum_row_nodes(center_row, center_col):
-        nodes_sum = arr[center_row][center_col - 1] + arr[center_row][center_col] + arr[center_row][center_col + 1]
-        return nodes_sum
-
-    def sum_hour_glass(current_center):
-        top_row_sum = sum_row_nodes(current_center[0] - 1, current_center[1])
-        bottom_row_sum = sum_row_nodes(current_center[0] + 1, current_center[1]) 
-        hour_glass_sum = arr[current_center[0]][current_center[1]] + top_row_sum + bottom_row_sum
-        return hour_glass_sum
-    
-    hour_glass_max = sum_hour_glass(current_center) # or 7 * -9 = -63 : minimum taol hour glass sum
-    current_center[1] += 1
-    
-    while current_center[0] < max_row_and_col:
-        hour_glass_sum = sum_hour_glass(current_center)
-        current_center[1] += 1
-        if hour_glass_sum > hour_glass_max:
-            hour_glass_max = hour_glass_sum 
+    hour_glass_sum_max = -9 * 7
+    excluded_indices = 1
+    max_index = len(arr[0]) - excluded_indices
+    print(max_index)
+    def sum_hour_glass(center): 
+        def sum_row(row, col):
+            return arr[row][col - 1] + arr[row][col] + arr[row][col + 1]
+        row = center[0]
+        col = center[1]
+        return arr[row][col] + sum_row(row - 1, col) + sum_row(row + 1, col)
         
-        if  current_center[1] == max_row_and_col:
-            current_center[0] += 1
-            current_center[1] = 1
-    return hour_glass_max 
+    for row in range(1, max_index):
+        for col in range(1, max_index):
+            current_center = [row,col]
+            hourglasssum = sum_hour_glass(current_center)
+            if hourglasssum > hour_glass_sum_max:
+                hour_glass_sum_max = hourglasssum
+    return hour_glass_sum_max
 
 '''
  input example: 
