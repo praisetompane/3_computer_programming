@@ -67,7 +67,7 @@ def hourglassSum(arr):
         hour_glass_sum = arr[current_center[0]][current_center[1]] + top_row_sum + bottom_row_sum
         return hour_glass_sum
     
-    hour_glass_max = sum_hour_glass(current_center)
+    hour_glass_max = sum_hour_glass(current_center) # or 7 * -9 = -63 : minimum taol hour glass sum
     current_center[1] += 1
     
     while current_center[0] < max_row_and_col:
