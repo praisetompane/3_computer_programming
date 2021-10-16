@@ -1,5 +1,4 @@
-./package_management.sh
+sh ./terminal.sh
 
-./terminal
+sh ./text_editing.sh
 
-./text_editing.sh

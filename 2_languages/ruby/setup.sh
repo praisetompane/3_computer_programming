@@ -1,8 +1,12 @@
-echo "installing brew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "installing ruby"
+brew update
+brew install ruby
 echo "done"
 
-install_dir="/home/linuxbrew/.linuxbrew/bin"
+mkdir $HOME/gems
+
+install_dir="/home/linuxbrew/.linuxbrew/lib/ruby/gems/3.0.0/bin"
+
 echo $install_dir
 z_shell_config=~/.zshrc
 bash_config=~/.bashrc
@@ -22,3 +26,9 @@ if [ -f "$bash_config" ]; then
     
 fi
 
+echo "installing jekyll"
+gem install jekyll bundler
+echo "done"
+
+#required for the bundler
+brew install gcc@5

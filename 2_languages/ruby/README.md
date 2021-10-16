@@ -1,4 +1,4 @@
-# Playground to experiment with 
+# Playground to experiment with ruby
 # sources
 * library reference:
 * language reference: 
