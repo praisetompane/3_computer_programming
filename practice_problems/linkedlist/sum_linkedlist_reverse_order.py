@@ -106,6 +106,6 @@ if __name__ == "__main__":
     first_number = input("first number: ")
     second_number = input("second number: ")
 
-    result = add(LinkedList([int(n) for n in first_number]), 
-        LinkedList([int(n) for n in second_number]))
+    result = add(LinkedList([int(n) for n in first_number]),
+                 LinkedList([int(n) for n in second_number]))
     result.toString()
