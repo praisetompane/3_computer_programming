@@ -1,7 +1,7 @@
 '''
     Context:
         Given two numbers represented as a
-            each represented as a linkedlist
+            each represented as a (singly)linkedlist
 
     Objective:
         Write function that: 
@@ -19,63 +19,71 @@
         input = (6 -> 1 -> 7) + (2 -> 9 -> 5)
         output = (9 -> 1 -> 2)
 
+    Options:
+        1: Use doubly linked list
+            keep pointer to head and tail
+            for forward addition
+                start from the tail.
+            I CHOOSE THIS ONE, as per the book progression I do not know Stacks yet! :)
+        2. Use stacks
+            convert the linked list into stacks
+                7   5
+                1   9
+                6   2
+                    removing the head and add it to stack
+                    the last value(i.e. ones places will be the first values we process(i.e.))
+                Each place value addition result is added to a stack
+                    We'll start at the ones,
+                    therefore the highest place value(i.e. will be the last inserted, thus the first removed when 
+                    converting the result to integer)
+            result stack
+                9
+                1
+                2
+                which is equal to 912
+
 '''
-from linkedlist.impl.linkedlist import LinkedList
+from linkedlist.impl.linkedlist_doubly import LinkedListDoubly
 
-class SumLinkedListForwardOrder:
 
-    def add(self, first_number, second_number):
-        number_system_base = 10
-        result = LinkedList()
-        carry = 0
-        _first_number = LinkedList(first_number)
-        _second_number = LinkedList(second_number)
+def add(first_number, second_number):
+    number_system_base = 10
+    carry = 0
+    result = LinkedListDoubly()
 
-        if _first_number.is_empty() is None:
-            return second_number.toInt()
-        elif _second_number.is_empty() is None:
-            return first_number.toInt()
+    d1 = first_number.tail
+    d2 = second_number.tail
 
-        first_num_digit = _first_number.head
-        second_num_digit = _second_number.head
+    def a(d1=0, d2=0, carry=0):
+        sum = d1 + d2 + carry
+        next_digit = sum % number_system_base
+        result.add(next_digit)
+        return sum//number_system_base
 
-        # O(1)
-        def _add(first, second, carry):
-            sum = first + second + carry
-            carry = sum//number_system_base
-            current_digit_value = sum % number_system_base
-            result.add(current_digit_value)
-            return carry
+    while(d1 is not None or d2 is not None):
+        if d1 is not None and d2 is not None:
+            carry = a(d1.data, d2.data, carry)
+            d1 = d1.prev
+            d2 = d2.prev
+        elif d1 is not None and d2 is None:
+            carry = a(d1.data, 0, carry)
+            d1 = d1.prev
+        elif d2 is not None and d1 is None:
+            carry = a(d2.data, 0, carry)
+            d2 = d2.prev
 
-        # O(N)
-        while(first_num_digit is not None or second_num_digit is not None):
-            if first_num_digit is not None and second_num_digit is not None :
-                carry = _add(first_num_digit.data, second_num_digit.data, carry)
-                first_num_digit = first_num_digit.next
-                second_num_digit = second_num_digit.next
-
-            elif first_num_digit is not None and second_num_digit is None:
-                carry = _add(first_num_digit.data, 0, carry)
-                first_num_digit = first_num_digit.next
-                second_num_digit = 0
-            elif first_num_digit is None and second_num_digit is not None:
-                carry = _add(0, second_num_digit.data, carry)
-                second_num_digit = second_num_digit.next
-                first_num_digit = 0
-
-        if carry > 0:
-            result.add(carry)
-
-        return result
+    if carry > 0:
+        result.add(carry)
+    return result
 
 
 if __name__ == "__main__":
+    print("supply numbers with the place value schema: ones tens hundreds thounsands ..")
     first_number = input("first number: ")
     second_number = input("second number: ")
-    adder = SumLinkedListForwardOrder()
     print("adding %s and %s", (first_number, second_number))
 
     first_numberList = [int(n) for n in first_number]
     second_numberList = [int(n) for n in second_number]
 
-    adder.add(first_numberList, second_numberList).toString()
+    add(first_numberList, second_numberList).toString()
