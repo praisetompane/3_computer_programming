@@ -15,5 +15,3 @@ def fix(workbook, price_reduction_percent):
         cell.value = corrected_price
 
     return workbook
-if __name__ == '__main__':
-    fix()
