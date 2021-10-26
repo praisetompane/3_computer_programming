@@ -14,6 +14,7 @@ import sys
 # The function accepts 2D_INTEGER_ARRAY matrix as parameter.
 #
 '''
+    DRAFT
     Context:
         Given:
             game:
