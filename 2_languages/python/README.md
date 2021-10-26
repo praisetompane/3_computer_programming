@@ -9,13 +9,8 @@ core python syntax and applications using the language
 * module index: https://docs.python.org/3/py-modindex.html
 * extending and embedding: https://docs.python.org/3.9/extending/index.html
 
-* all docs : https://docs.python.org/3.9/
-
-
 # community
 * packages(libraries): https://pypi.org
 
-succint snippets: https://www.youtube.com/c/LivePython/playlists
 
-Praise Tompane
 
