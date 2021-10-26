@@ -12,6 +12,7 @@ cp run_project.sh ./$project
 
 cd $project
 
+
 "laying out root folder"
 touch app.py
 
