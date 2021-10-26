@@ -8,8 +8,7 @@
 
 project=$1
 mkdir $project
-cp run_project.sh ./$project
-cp create_app.sh ./$project
+cp run_project.sh $project
 cd $project
 
 echo "creating virtual environment $project and installing Django"
