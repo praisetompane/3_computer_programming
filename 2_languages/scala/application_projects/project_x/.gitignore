@@ -1,0 +1,10 @@
+target/
+.bloop/
+.bsp/
+.metals/
+.vscode/
+.dccache
+.DS_Store
+.project/.bloop/
+project/project/
+.project/project/.bloop/
