@@ -1,0 +1,1 @@
+sbt update compile test

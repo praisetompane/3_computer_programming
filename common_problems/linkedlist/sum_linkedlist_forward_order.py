@@ -27,6 +27,9 @@
             I CHOOSE THIS ONE, as per the book progression I do not know Stacks yet! :)
         2. Use stacks
             convert the linked list into stacks
+                - Can be:
+                    - a node based stack
+                    - a list based stack
                 7   5
                 1   9
                 6   2

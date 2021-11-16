@@ -6,7 +6,7 @@ import random
 import re
 import sys
 
-
+# source: https://github.com/RyanFehr/HackerRank/blob/master/Algorithms/Constructve%20Algorithms/Flipping%20Matrix/Solution.java
 
 #
 # Complete the 'flippingMatrix' function below.
