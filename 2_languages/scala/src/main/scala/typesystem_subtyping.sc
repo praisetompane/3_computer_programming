@@ -2,10 +2,12 @@
     Bill Venners
     https://www.youtube.com/watch?v=vuTFg5g_f6w
 */
-trait Fruit
+trait Any
+trait Fruit extends Any
 trait Plum extends Fruit
 trait Apricot extends Fruit
 trait Pluot extends Plum with Fruit
+trait Nothing extends Plum
 
 /*
     def: is-a-subtype-of relationship
@@ -41,3 +43,11 @@ eat(plumToFruit(new Plum{}))
 println("Or Given a Plum I can")
 eat(new Plum{})// NB: The subtype relationship(i.e. function) implicitly converts the Plum to a Fruit
 
+/*
+    def: types as set of values
+        type = set of values
+        members of type = inhabitants
+    
+        is-a-subtype-of = is-a-subset-of 
+        TypeA <: TypeB = TypeA ⊆ TypeB
+*/
