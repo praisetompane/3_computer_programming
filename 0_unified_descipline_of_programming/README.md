@@ -1,4 +1,12 @@
-# sources
-* peter van roy, seif haridi, complete concepts, techniques, and models of computer programming
+approach to a unified  descipline of programming
 
-* where does Donald Knuth's litrate programming fit in?
+def: programming concepts: {}
+
+def: computation model := formal system, that defines how computations are done
+        computation model provides a programming model
+
+def: programming model := programming techniques AND design principles,
+                            made possible AND used by a computation model
+                            
+            
+   
