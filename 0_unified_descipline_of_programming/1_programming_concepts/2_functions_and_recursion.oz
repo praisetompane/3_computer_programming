@@ -1,15 +1,15 @@
-%%% declare variale Func
-%%% create functin
-   %%% and bound variable Func to it
-%%%  i.e. bound the identifier "Func"
-%%%         to the value : fun if N == 0 then 1 else {Func N - 1} * N
+%%% declare variale Fact
+%%% create Facttin
+   %%% and bound variable Fact to it
+%%%  i.e. bound the identifier "Fact"
+%%%         to the value : fun if N == 0 then 1 else {Fact N - 1} * N
 declare
-fun {Func N}
-   if N == 0 then 1 else {Func N - 1}*N end
+fun {Fact N}
+   if N == 0 then 1 else {Fact N - 1}*N end
 end
 
-{Browse {Func 10}}
-{Browse {Func 100}}
+{Browse {Fact 10}}
+{Browse {Fact 100}}
 %%% The results of these invocations is known as infinite arbitary arithmetic
    %%% the inifinity is limited by the amout of memory the computer has
 
