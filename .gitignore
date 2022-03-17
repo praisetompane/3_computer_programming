@@ -142,3 +142,15 @@ dmypy.json
 data_*
 
 .dccache
+# Administrative
+targets.txt
+todo.txt
+research_topics.txt
+schools.txt
+companies.txt
+8_impl_repos
+studies
+literature
+open_source
+.dccache
+courses

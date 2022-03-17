@@ -51,9 +51,8 @@ def arrayManipulation(n, queries):
         if max_consective_increase < max_consective_increase + sums[i]:
             max_consective_increase = max_consective_increase + sums[i]
 
-    sums_file =  open('data_10000000_100000_sums.txt', 'w')
     for n in sums:
-        sums_file.write(str(n))
+        print(N)
     return max_consective_increase
 
 

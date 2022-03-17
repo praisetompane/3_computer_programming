@@ -1,9 +1,0 @@
-introduction to computer science and programming
-    for students with little to no programming experience.
-
-State: *** 
-
-# Legend
-* In progress
-** Completed
-*** Completed equivalent
