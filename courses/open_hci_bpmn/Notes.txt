@@ -1,0 +1,98 @@
+WSBPEL (Web Services Business Process Execution Language)
+
+Week 1
+  BPMS Open source project
+  Process Landscape
+  Process Mining
+
+
+Week 2
+  XOR split (exclusive or split) -> Only ONE flow executed
+  XOR Join (exclusive or join)-> Any true incoming flow
+
+  AND split (parallel split) -> Can happen concurrently
+  AND Join (synchronising join)-> All incoming flows must trisgger join
+
+  OR split (Inclusive or split) -> All arcs/flows with a true condition are signaled
+    -Key difference to the (AND join) is that there is an evaluation of a condition
+  OR join ()
+
+
+
+  Events vs Messages?
+  Interrupting vs Non-interrupting events
+
+
+Week 3 : Soundness
+
+  Three layers of analysis for structural soundness
+
+    3.1. Process Behaviour
+
+      Def: Set of all execution sequences that are possible
+
+      - Syntactic correctness: model MATCHES ABSTRACT SYNTAX of the language(i.e. Concepts
+        and their relationships)
+
+      - Semantic correctness: models BEHAVES correctly and TERMINATES correctly
+          Checks to ensure that there are no semantic/behavioural anomalies
+
+      Behavioural anamolies
+
+    3.2. Structural soundness
+
+      - Requirement for Soundness checking/analysis
+
+      - Transform the structure of the model without changing their behaviour
+
+      - Prerequisites for structural soundness
+          1. One start event (i)
+          2. One end event (o)
+          3. All nodes are on a path from (i) to (o)
+
+      - For analysis purposes we remove:
+        - Multiple start events and substitute these with a "magic" XOR gateway (assuming of-course
+        that the start events are exclusive)
+
+        - Multiple end events and substitute these with an XOR join and one end event
+          - Assumption: All end events are exclusive
+
+      NB: Structural soundness analysis abstracts from labels and roles
+        -> The one single end event for the "Multiple end events" scenario does not
+          need to have a label
+
+    3.3. Soundness Framework
+
+      Assumption: It is assumed all decisions that a process can take will be taken eventually
+      Key properties that must be fulfilled
+        * All paths are from (i) to (o): Once a process has started at a point(i), regardless of
+          the decisions it takes it always reaches (0)
+
+        * After a process has reached (o) then the process can no longer execute
+          any activities
+
+        * Each process activity participates in at least one path from (i) to (o)
+
+
+    3.3.
+
+    3.4. Petri Net Primers
+
+      Graphs that capture the behaviour of systems
+      -> Formal representation of concurrent systems
+
+
+    3.5. Reachability graphs are used to model the soundness of Petri Nets
+
+
+Week 4
+
+  4.1. Sub processes
+
+    Throwing link events: Break model on page : Symbols??
+    Catching link events: Continue model on another page: Symbols??
+
+
+    Call activity: Callable activity
+
+    ad-hoc subprocess

@@ -1,0 +1,129 @@
+<!Doctype html>
+
+<html>
+
+	<head>
+		
+		<style>
+		
+			fieldset {
+				background:lightyellow;
+				border:10px solid yellow;
+				margin-bottom:10px;
+				width:720px;			
+			}	
+
+			label {
+				width:180px;
+				display:inline-block;
+				right-align;
+				top-align;
+			}
+			
+			radio label {width:auto;}
+			
+			checkbox label {width:auto;}
+			
+			span {
+				text-align:center;
+				color:white;
+			}	
+			
+			textarea {
+				width:360px;
+				height:50px;
+			}
+			
+			.spanleft {
+				background-color:darkred;
+			}
+			
+			.spanright{
+				background-color: purple;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+		<h1> Please Enter Your Details For Our Dating Website!<h1>
+		<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+
+			<fieldset>
+				<legend>Your Face</legend>
+					<label for="imagefile">Your image:</label>
+					<input type="file" id="imagefile" name="imagefile" required> <br>
+
+					<label for="preview">Image preview:</label>
+					<img src="" id="preview" name="imagepreview">
+			</fieldset>
+
+
+			<fieldset>
+				<legend>Your General Details</legend>
+				<label for="fullNames">Name:</label>
+				<input type="text" id="fullNames" name="fullNames" placeholder="Your full name" required><br>
+
+				<label for="gender">Gender:</label>
+				<input type="radio" id="gender" name="gender" required> Male
+				<input type="radio" id="gender" name="gender" required> Female <br>
+
+				<label for="Age">Age:</label>
+				<input type="number" id="Age" name="age" required><br>
+
+				<label for="DateOfBirth">Date of birth:</label>
+				<input type="date" id="DateOfBirth" name="DateOfBirth"><br>
+
+				<label for="FavoriteColour">Favorite color:</label>
+				<input type="color" id="FavoriteColour" name="FavoriteColour"><br>
+
+				<label for="Country">Which country:</label>
+				<select id ="Country" name="Country">
+						<option>no selection</option>
+						<option> South Africa </option>
+						<option> Congo </option>
+						<option> Seria </option>
+						<option> Zambia </option>
+						<option> Malsawi </option>
+				</select>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Your Indicators</legend>
+					<label for="Height">Height:</label>
+					<span class="spanleft">Short</span>
+						<input type="range" id="Height" name="Height" min="0" max="100">
+					<span class="spanright">Tall</span>
+					<br>
+
+					<label for="Salary">Salary:</label>
+					<span class="spanleft">Poor</span>
+						<input type="range" id="Salary" name="Salary" min="0" max="100">
+					<span class="spanright"> Rich</span>
+			</fieldset>
+
+			<fieldset>
+				<legend> Your Contact Information</legend>
+					<label for="Email">Email:</label>
+					<input type="email" id="Email" name="Email" required> <br>
+
+					<label for="Mobile">Mobile:</label>
+					<input type="tel" id="Mobile" name="Mobile"> <br>
+
+					<label for="Address">Address:</label>
+					<textarea id="Address" name="Address" row=3 cols="60">
+					</textarea><br>
+
+					<label for="ContactMethod">Method to contact you:</label>
+					<input type="checkbox" id="ContactMethod" name="ContactMethod"> Email
+					<input type="checkbox" id="ContactMethod" name="ContactMethod"> Whatsapp
+					<input type="checkbox" id="ContactMethod" name="ContactMethod"> In-app chat
+			</fieldset>
+
+			<input type= "submit" value="submit">
+		<form>
+
+	</body>
+</html>

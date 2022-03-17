@@ -1,0 +1,17 @@
+Style
+	Style in the <head>
+		element {style properties}
+		p1{color: read}
+
+	Inline style : Takes first priority
+	
+	Class : defined  .classname {style properties}
+	
+	Psuedoclasses
+		a:hover {color:green}
+		li:empty {background:brown}
+		a:active{color:blue}: Current link being processed
+
+	Contextual Rules
+
+		ol li {colour:green} : Make only list items in an unordered list green
