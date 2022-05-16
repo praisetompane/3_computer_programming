@@ -7,6 +7,6 @@ echo "installing pip"
 python3 -m ensurepip --upgrade
 echo "done"
 
-echo "installing pipenv"
-pip3 install pipenv
-echo "installing pipenv"
+echo "installing virtualenv"
+pip3 install virtualenv
+echo "installing virtualenv"

@@ -1,0 +1,22 @@
+# https://hub.docker.com/r/tecnickcom/alldev/
+# https://www.youtube.com/watch?v=CGCn0b4FOfs
+
+# base image used
+docker run --name ubuntu-dev-env -e HOST_IP=10.13.7.40 --expose 3000 -p 3000:3000 -v '{YOUR_DIRECTORY}:/src' -t -i tecnickcom/alldev /bin/bash
+
+
+# praise image
+docker run --name ubuntu-dev-env -e HOST_IP=10.13.7.40 --expose 3000 -p 3000:3000 -v '{YOUR_DIRECTORY}:/src' -t -i praisetompane/ubuntu-development:v1.0.0 /bin/bash
+
+docker run --name ubuntu-dev-env -e HOST_IP=192.168.101.238 --expose 3000 -p 3000:3000 -v '/Users/praisetompane:/src' -t -i praisetompane/ubuntu-development:v1.0.0 /bin/bash
+
+# utilities 
+   # install gitfacade
+   # install https://github.com/praisetompane/3_computer_programming
+
+# commit changes
+docker commit ubuntu-development praisetompane/ubuntu-development:v1.0.0
+
+
+# pull image
+docker pull praisetompane/ubuntu-development:v1.0.0
