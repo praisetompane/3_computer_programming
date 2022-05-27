@@ -15,8 +15,7 @@ docker run --name ubuntu-dev-env -e HOST_IP=192.168.101.238 --expose 3000 -p 300
    # install https://github.com/praisetompane/3_computer_programming
 
 # commit changes
-docker commit ubuntu-development praisetompane/ubuntu-development:v1.0.0
-
+docker commit ubuntu-dev-env praisetompane/ubuntu-development:v1.0.0 && docker push praisetompane/ubuntu-development:v1.0.0
 
 # pull image
 docker pull praisetompane/ubuntu-development:v1.0.0
