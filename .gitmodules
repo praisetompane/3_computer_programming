@@ -1,0 +1,11 @@
+[submodule "git_facade"]
+	path = 1_languages/bash/application_projects/git_facade
+	url = git@github.com:praisetompane/git_facade.git
+[submodule "incidentmanagement"]
+	path = 1_languages/python/application_projects/incidentmanagement
+	url = git@github.com:praisetompane/incidentmanagement.git
+[submodule "personal-website"]
+	path = 1_languages/ruby/application_projects/personal-website
+	url = git@github.com:praisetompane/praisetompane.github.io.git
+
+

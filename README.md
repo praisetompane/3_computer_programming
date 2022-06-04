@@ -1,4 +1,4 @@
-# 3_programming
+# (WIP) 3_computer_programming
 unpack what computer programming is and its role in the implementation of computation.
 
 # setup general programming environment
@@ -7,7 +7,8 @@ unpack what computer programming is and its role in the implementation of comput
     ./setup.sh
 ```
 # references
-* peter van roy, seif haridi, complete concepts, techniques, and models of computer programming
+    * peter van roy, seif haridi, complete concepts, techniques, and models of computer programming
+
 # radar
-* https://github.com/collections/programming-languages 
+    * https://github.com/collections/programming-languages 
 
