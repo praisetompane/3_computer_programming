@@ -1,5 +1,8 @@
-# (WIP) 3_computer_programming
+# 3_computer_programming
+
 unpack what computer programming is and its role in the implementation of computation.
+
+**Disclaimer**: This is an ongoing and incomplete project to unpack these concepts.
 
 # setup general programming environment
 ``` bash
